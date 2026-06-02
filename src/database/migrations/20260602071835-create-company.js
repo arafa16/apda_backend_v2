@@ -17,15 +17,15 @@ module.exports = {
       },
       address: {
         type: Sequelize.TEXT,
-        allowNull: false,
+        allowNull: true,
       },
       logo: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       logo_url: {
         type: Sequelize.TEXT,
-        allowNull: false,
+        allowNull: true,
       },
       is_active: {
         type: Sequelize.BOOLEAN,

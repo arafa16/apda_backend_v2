@@ -1,6 +1,6 @@
 ### [Unreleased](https://github.com/arafa16/apda_backend_v2/compare/1.0.0...main)
 
-#### v0.2.0 - 2026-06-02
+#### v0.2.0 - 2026-06-03
 
 - build: v.0.2.0 by [Ara Fa Adri](https://github.com/arafa16) in [#2982664](https://github.com/arafa16/apda_backend_v2/commit/2982664577c29c490e8407bea471e8d1a3137856).
 

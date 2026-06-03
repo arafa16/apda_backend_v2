@@ -13,7 +13,7 @@ module.exports = {
         type: Sequelize.STRING,
       },
       nominal: {
-        type: Sequelize.DECIMAL,
+        type: Sequelize.DECIMAL(18, 2),
       },
       is_active: {
         type: Sequelize.BOOLEAN,

@@ -33,9 +33,6 @@ module.exports = {
       year: {
         type: Sequelize.DECIMAL,
       },
-      amount: {
-        type: Sequelize.DECIMAL,
-      },
       is_active: {
         type: Sequelize.BOOLEAN,
         defaultValue: true,

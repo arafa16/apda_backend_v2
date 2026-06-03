@@ -31,10 +31,10 @@ module.exports = {
         type: Sequelize.DATE,
       },
       target_amount: {
-        type: Sequelize.DECIMAL,
+        type: Sequelize.DECIMAL(18, 2),
       },
       max_investment_amount: {
-        type: Sequelize.DECIMAL,
+        type: Sequelize.DECIMAL(18, 2),
       },
       is_target_reached: {
         type: Sequelize.BOOLEAN,

@@ -9,9 +9,16 @@ const db = require("./src/models/index.js");
 const errorHandlerMiddleware = require("./src/middleware/error_handler.js");
 const not_found = require("./src/middleware/not_found.js");
 
+const application_router = require("./src/routes/application.route.js");
 const auth_router = require("./src/routes/auth.route.js");
 const status_router = require("./src/routes/status.route.js");
 const company_router = require("./src/routes/company.route.js");
+const bank_router = require("./src/routes/bank.route.js");
+const privilege_router = require("./src/routes/privilege.route.js");
+const user_router = require("./src/routes/user.route.js");
+const nominal_router = require("./src/routes/nominal.route.js");
+const stage_router = require("./src/routes/stage.route.js");
+const investment_scame_router = require("./src/routes/investment_scame.route.js");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -48,9 +55,16 @@ app.use(express.json());
 app.use(express_fileupload());
 app.use(express.static("public"));
 
+app.use("/api/v1/application", application_router);
 app.use("/api/v1/auth", auth_router);
 app.use("/api/v1/status", status_router);
 app.use("/api/v1/company", company_router);
+app.use("/api/v1/bank", bank_router);
+app.use("/api/v1/privilege", privilege_router);
+app.use("/api/v1/user", user_router);
+app.use("/api/v1/nominal", nominal_router);
+app.use("/api/v1/stage", stage_router);
+app.use("/api/v1/investment_scame", investment_scame_router);
 
 app.use(errorHandlerMiddleware);
 app.use(not_found);

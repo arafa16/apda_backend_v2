@@ -74,20 +74,20 @@ const getDataTable = async (req, res) => {
   const limit = parseInt(req.query.limit) || 10;
 
   const offset = (page - 1) * limit;
-  const status = await statusModel.findAndCountAll({
+  const datas = await statusModel.findAndCountAll({
     where: whereClause,
     limit,
     offset,
   });
 
-  const pages = Math.ceil(status.count / limit);
+  const pages = Math.ceil(datas.count / limit);
 
   return res.status(200).json({
     success: true,
     message: "Get status successfully",
-    data: status.rows,
+    data: datas.rows,
     meta: {
-      total: status.count,
+      total: datas.count,
       page,
       limit,
       pages,

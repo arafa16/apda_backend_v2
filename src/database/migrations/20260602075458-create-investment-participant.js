@@ -15,7 +15,7 @@ module.exports = {
       user_id: {
         type: Sequelize.INTEGER,
       },
-      investment_scame_id: {
+      investment_scheme_id: {
         type: Sequelize.INTEGER,
       },
       is_form_enabled: {

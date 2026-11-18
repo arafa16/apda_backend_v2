@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("investment_scames", {
+    await queryInterface.createTable("investment_schemes", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -16,7 +16,7 @@ module.exports = {
         type: Sequelize.STRING,
       },
       code: {
-        type: Sequelize.DECIMAL,
+        type: Sequelize.STRING,
       },
       number: {
         type: Sequelize.DECIMAL,
@@ -84,6 +84,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("investment_scames");
+    await queryInterface.dropTable("investment_schemes");
   },
 };

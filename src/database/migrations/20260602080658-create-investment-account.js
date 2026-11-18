@@ -18,14 +18,14 @@ module.exports = {
       user_id: {
         type: Sequelize.INTEGER,
       },
-      investment_scame_id: {
+      investment_scheme_id: {
         type: Sequelize.INTEGER,
       },
       stage_id: {
         type: Sequelize.INTEGER,
       },
       code: {
-        type: Sequelize.DECIMAL,
+        type: Sequelize.STRING,
       },
       number: {
         type: Sequelize.DECIMAL,

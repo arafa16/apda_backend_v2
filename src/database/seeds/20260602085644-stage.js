@@ -29,7 +29,7 @@ module.exports = {
       {
         id: 3,
         uuid: uuidv4(),
-        name: "Approved",
+        name: "Waiting List",
         sequence: 3,
         code: 3,
         is_active: true,
@@ -39,7 +39,7 @@ module.exports = {
       {
         id: 4,
         uuid: uuidv4(),
-        name: "Waiting List",
+        name: "Approved",
         sequence: 4,
         code: 4,
         is_active: true,
@@ -49,7 +49,7 @@ module.exports = {
       {
         id: 5,
         uuid: uuidv4(),
-        name: "Cancel",
+        name: "Canceled",
         sequence: 5,
         code: 5,
         is_active: true,

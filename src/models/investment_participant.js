@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: DataTypes.UUIDV4,
       },
       user_id: DataTypes.INTEGER,
-      investment_scame_id: DataTypes.INTEGER,
+      investment_scheme_id: DataTypes.INTEGER,
       is_form_enabled: DataTypes.BOOLEAN,
       is_eligible: DataTypes.BOOLEAN,
       is_active: DataTypes.BOOLEAN,

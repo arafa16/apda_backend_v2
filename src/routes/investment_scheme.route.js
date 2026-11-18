@@ -6,7 +6,7 @@ const {
   createData,
   updateData,
   deleteData,
-} = require("../controllers/nominal.controller");
+} = require("../controllers/investment_scheme.controller");
 const { verifyToken } = require("../middleware/auth.middleware");
 
 const router = express.Router();

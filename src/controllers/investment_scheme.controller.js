@@ -1,5 +1,5 @@
 const {
-  investment_scame: investmentScameModel,
+  investment_scheme: investmentSchemeModel,
 } = require("../models/index.js");
 const { Op } = require("sequelize");
 const CustomHttpError = require("../utils/custom_http_error.js");
@@ -34,7 +34,7 @@ const getDatas = async (req, res) => {
   const limit = Number(req.query.limit) || 10;
   const offset = Number(page - 1) * limit;
 
-  const { count, rows } = await investmentScameModel.findAndCountAll({
+  const { count, rows } = await investmentSchemeModel.findAndCountAll({
     where,
     limit,
     offset,
@@ -72,7 +72,7 @@ const getDataTable = async (req, res) => {
   const limit = parseInt(req.query.limit) || 10;
 
   const offset = (page - 1) * limit;
-  const datas = await investmentScameModel.findAndCountAll({
+  const datas = await investmentSchemeModel.findAndCountAll({
     where: whereClause,
     limit,
     offset,
@@ -96,7 +96,7 @@ const getDataTable = async (req, res) => {
 const getDataById = async (req, res) => {
   const { uuid } = req.params;
 
-  const findData = await investmentScameModel.findOne({
+  const findData = await investmentSchemeModel.findOne({
     where: { uuid },
   });
 
@@ -138,7 +138,7 @@ const createData = async (req, res) => {
     throw new CustomHttpError("name and code are required", 400);
   }
 
-  const newData = await investmentScameModel.create({
+  const newData = await investmentSchemeModel.create({
     name,
     code,
     number,
@@ -193,7 +193,7 @@ const updateData = async (req, res) => {
     is_active,
   } = req.body;
 
-  const findData = await investmentScameModel.findOne({
+  const findData = await investmentSchemeModel.findOne({
     where: { uuid },
   });
 
@@ -235,7 +235,7 @@ const deleteData = async (req, res) => {
   const { uuid } = req.params;
   const { permanent } = req.query;
 
-  const findData = await investmentScameModel.findOne({
+  const findData = await investmentSchemeModel.findOne({
     where: { uuid },
   });
 
